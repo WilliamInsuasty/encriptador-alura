@@ -29,11 +29,6 @@ function limpiarTexto() {
 
 // Función para verificar el texto ingresado
 function verificarTexto(texto) {
-    if (texto.trim() === "") {
-        mostrarAlerta("Por favor, diligencie un texto para encriptarlo");
-        limpiarTexto();
-        return false;
-    }
     if (!regexTexto.test(texto)) {
         mostrarAlerta("Por favor, ingrese solo letras minúsculas y sin acentos.");
         limpiarTexto();
@@ -113,7 +108,7 @@ function copiarTexto() {
     navigator.clipboard.writeText(textoEvaluar.value);
     textoEvaluar.value = "";
 
-    imgMuneco.style.display = 'none';
+    imgMuneco.style.display = 'block'; //none
     mensajeUno.style.display = 'block';  
     mensajeDos.style.display = 'block'; 
 
