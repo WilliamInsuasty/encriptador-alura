@@ -1,0 +1,404 @@
+/* Aquí se importan las url de las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Aquí variable globales */
+:root {
+    --LightBlue100: #F3F5FC;
+    --Font: #E5E5E5;
+    --white: #FFFFFF;
+    --dark-Blue: #0A3871;
+    --Gray: #f5efef;
+    --Medium-Gray: #67808E;
+    --RGBA: rgba(0, 0, 0, 0.08);
+    --White-Blue: #D8DFE8;
+    --Medium-Blue: #0a38718a;
+    --Gray500: #343A40;
+    --Green: #495057;
+}
+
+/* Aquí el selector universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    background: var(--LightBlue100);
+}
+
+::selection {
+    background: var(--dark-Blue);
+    color: var(--white);
+}
+
+body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    position: relative;
+}
+
+.logo {
+    height: 50px;
+    z-index: 2;
+    position: relative;
+}
+
+.contenedor-titulo {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.titulo {
+    font-size: 24px;
+    color: var(--dark-Blue);
+    animation: latido 1.5s infinite;
+}
+
+/* Animación del título 
+@keyframes latido {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}*/
+
+/* Estilos de la sección principal */
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Posición del textarea en la página */
+.encriptador {
+    width: 50%;
+    margin: 168px 0px 0px 240px;
+    background: transparent;
+}
+
+/* Estilos del textarea */
+.encriptar {
+    width: 100%; /* Ajuste para mejorar la responsividad */
+    max-width: 660px; /* Ancho máximo */
+    height: 400px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    resize: none;
+}
+
+/* Aquí se cambia a color azul el texto "ingrese el texto aquí" */
+.encriptar::placeholder,
+.encriptar:focus {
+    color: var(--dark-Blue);
+}
+
+.encriptador-aviso {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    top: 650px;
+}
+
+.texto-aviso {
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    opacity: 0.8;
+    color: var(--Black);
+}
+
+.encriptador-contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 680px;
+}
+
+/* Estilos de los botones encriptar */
+.btn-encriptar {
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--white);
+    background: var(--dark-Blue);
+    border: 1px solid var(--dark-Blue);
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 20px 29px -5px var(--RGBA);
+}
+
+.btn-encriptar:active {
+    box-shadow: inset 2px 2px 4px var(--Font), inset -3px -4px 8px var(--dark-Blue);
+    color: var(--White-Blue);
+}
+
+/* Estilos del botón desencriptar */
+.btn-desencriptar {
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--dark-Blue);
+    background: var(--White-Blue);
+    border: 1px solid var(--dark-Blue);
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 20px 29px -5px var(--RGBA);
+}
+
+.btn-copiar:active,
+.btn-desencriptar:active {
+    box-shadow: inset 2px 2px 4px var(--dark-Blue), inset -3px -4px 8px var(--Font);
+    color: var(--Medium-Blue);
+}
+
+.tarjeta {
+    width: 300px;
+    height: 645px;
+    background: var(--white);
+    box-shadow: 10px 20px 30px -8px var(--Gray);
+    position: relative;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.tarjeta-contenedor {
+    width: 250px;
+    margin: auto;
+    margin-top: 50%;
+    background: var(--white);
+}
+
+.img-muñeco {
+    background: var(--white);
+}
+
+.texto-uno {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--Gray500);
+    background: var(--white);
+}
+
+.texto-dos {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--Black);
+    background: var(--white);
+}
+
+.evaluar {
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--Green);
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+}
+
+.evaluar:focus {
+    outline: none;
+}
+
+.btn-copiar {
+    width: 224px;
+    height: 67px;
+    margin: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    padding: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: var(--White-Blue);
+    border: 1px solid var(--dark-Blue);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Esto para que cuando se pase el cursor sobre los botones se reduzca el tamaño */
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.btn-copiar:hover {
+    transform: scale(0.97);
+}
+
+/* Aquí el pie de página */
+footer {
+    margin-top: 50px; /* Aumentar el margen superior para separar del contenido principal */
+    padding: 20px; /* Ajustar padding para mejorar el espaciado interno */
+    border-top: 2px solid var(--Font);
+    color: var(--Gray);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 550;
+    color: var(--Green);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+footer .copyright {
+    margin-bottom: 12px; /* Espacio entre el texto de copyright y los iconos */
+}
+
+footer a {
+    margin: 5px; /* Espacio entre los iconos */
+}
+
+/* Estilos de los íconos de redes sociales */
+footer img {
+    width: 25px; /* Tamaño uniforme para todos los íconos */
+    height: 25px;
+    opacity: 0.5; /* Menos vistoso */
+    transition: opacity 0.3s; /* Suavizar la transición al pasar el cursor */
+}
+
+footer img:hover {
+    opacity: 1; /* Aumentar visibilidad al pasar el cursor */
+}
+
+/* Para alinear los iconos horizontalmente */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .iconos__redes__sociales {
+    display: flex;
+    justify-content: center; /* Centrar los íconos horizontalmente */
+    gap: 10px; /* Espacio entre los íconos */
+    
+}
+
+/* Estilo para botones deshabilitados */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    background: #d3d3d3;
+    border: 1px solid #a9a9a9;
+}
+
+
+
+
+/* Estilo de responsividad */
+@media(max-width: 1250px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .encriptador{
+        margin: 168px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .encriptador-contenedor{
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .encriptador-aviso{
+        position: inherit;
+        margin: 15px;
+    }   
+    
+    .tarjeta{
+        width: 665px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .tarjeta-contenedor{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .img-muñeco{
+        display: none;
+    }
+
+    .btn-copiar{
+        position: inherit;
+        width: 100%;
+    }
+
+    .evaluar{
+        width: 100%;
+        height: 210px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Encriptador de Texto</title>
+</head>
+
+<body>
+
+    <!-- Encabezado Logo Alura -->
+    <header>
+        <a href="#" rel="">
+            <img src="assets/logo.png" alt="Logo Alura" class="logo">
+        </a>
+        <div class="contenedor-titulo">
+            <h1 class="titulo">Encriptador - Desencriptador de Texto</h1>
+        </div>
+    </header>
+
+    <!-- Principal -->
+    <main>
+        <section class="encriptador">
+            <textarea class="encriptar" id="texto" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="encriptador-aviso">
+                <img src="assets/alerta.png" alt="Imagen Alerta" class="img-aviso">
+                <p class="texto-aviso">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="encriptador-contenedor">
+                <button type="submit" class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button type="submit" class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        <section class="tarjeta">
+            <div class="tarjeta-contenedor">
+                <img src="assets/muñeco.png" alt="Imagen Muñeco" class="img-muñeco">
+                <p class="texto-uno">Ningún mensaje fue encontrado</p>
+                <br>
+                <p class="texto-dos">Ingrese el texto que desees encriptar o desencriptar</p>
+            </div>
+            <textarea id="textarea-evaluar" type="mensaje" class="evaluar" readonly></textarea>
+            <button type="submit" class="btn-copiar" onclick="copiarTexto()">Copiar</button>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="copyright">© 2024 Por: William Insuasty</div>
+        <div class="iconos__redes__sociales">
+            <a href="https://co.linkedin.com/" target="_blank">
+                <img src="./assets/linkedin.png" alt="Logo linkedin">
+            </a>
+            <a href="https://github.com/" target="_blank">
+                <img src="./assets/github.png" alt="Logo github">
+            </a>
+            <a href="https://x.com/?lang=es" target="_blank">
+                <img src="./assets/twitter-novo.png" alt="Logo twitter">
+            </a>
+            
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
