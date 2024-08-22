@@ -40,10 +40,10 @@ function verificarTexto(texto) {
 // Función para encriptar el texto
 function encriptar(texto) {
     const matrizCodigo = [["e", "enter"],
-                          ["i", "imes"], 
-                          ["a", "ai"], 
-                          ["o", "ober"], 
-                          ["u", "ufat"]];
+    ["i", "imes"],
+    ["a", "ai"],
+    ["o", "ober"],
+    ["u", "ufat"]];
     let textoEncriptado = texto.toLowerCase();
 
     matrizCodigo.forEach(([original, reemplazo]) => {
@@ -56,10 +56,10 @@ function encriptar(texto) {
 // Función para desencriptar el texto
 function desencriptar(texto) {
     const matrizCodigo = [["e", "enter"],
-                          ["i", "imes"],
-                          ["a", "ai"],
-                          ["o", "ober"],
-                          ["u", "ufat"]];
+    ["i", "imes"],
+    ["a", "ai"],
+    ["o", "ober"],
+    ["u", "ufat"]];
     let textoDesencriptado = texto.toLowerCase();
 
     matrizCodigo.forEach(([original, reemplazo]) => {
@@ -88,7 +88,7 @@ function btnEncriptar() {
 
 // Función para el botón desencriptar
 function btnDesencriptar() {
-    const textoIngresado = textoArea.value.trim(); 
+    const textoIngresado = textoArea.value.trim();
 
     if (verificarTexto(textoIngresado)) {
         const textoEncriptado = desencriptar(textoIngresado);
@@ -108,9 +108,11 @@ function copiarTexto() {
     navigator.clipboard.writeText(textoEvaluar.value);
     textoEvaluar.value = "";
 
-    imgMuneco.style.display = 'block'; //none
-    mensajeUno.style.display = 'block';  
-    mensajeDos.style.display = 'block'; 
+    imgMuneco.style.display = 'none'; //none
+    mensajeUno.style.display = 'block';
+    mensajeDos.style.display = 'block';
+
+
 
     actualizarEstadoBotones();
 }
@@ -127,7 +129,7 @@ function actualizarEstadoBotones() {
 
 // Función para manejar el tamaño de la ventana
 function manejarTamañoVentana() {
-    if (window.innerWidth <= 1250) {
+    if (window.innerWidth <= 1375) {
         imgMuneco.style.display = 'none';
     } else {
         imgMuneco.style.display = 'block';
